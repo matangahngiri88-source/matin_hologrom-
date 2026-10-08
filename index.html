@@ -59,4 +59,54 @@
 <section id="about" class="section"><div class="heading"><h2>اینجا چه کار می‌کنیم؟</h2><p>سه محور اصلی محتوای MATIN_HOLOGROM</p></div><div class="cards"><article class="card"><div class="icon">🤖</div><h3>ابزارهای AI</h3><p>بررسی ابزارهای جدید برای متن، تصویر، کدنویسی و کارهای روزمره.</p></article><article class="card"><div class="icon">⚡</div><h3>تست واقعی</h3><p>یک مسئله یکسان، چند مدل هوش مصنوعی؛ نتیجه را مقایسه می‌کنیم.</p></article><article class="card"><div class="icon">🔎</div><h3>مقایسه صادقانه</h3><p>نقاط قوت و ضعف را می‌گوییم؛ قرار نیست هر ابزار را بهترین جا بزنیم.</p></article></div></section>
 <section id="topics" class="section"><div class="heading"><h2>موضوعات</h2><p>محتوایی که قرار است دنبال کنی</p></div><div class="cards"><article class="card"><h3>ChatGPT vs Claude vs DeepSeek</h3><p>تست‌های یکسان و مقایسه کاربردی مدل‌ها.</p></article><article class="card"><h3>ساخت با AI</h3><p>از ایده تا تولید متن، تصویر و کد با ابزارهای هوش مصنوعی.</p></article><article class="card"><h3>ترندهای AI</h3><p>ترندهای مهم را بررسی می‌کنیم، نه هر چیزی که فقط وایرال شده.</p></article></div></section>
 <section id="youtube" class="section"><div class="cta"><h2>ویدیوهای جدید اینجاست</h2><p style="color:#aaa">برای دیدن آخرین ویدیوهای MATIN_HOLOGROM وارد کانال شو.</p><a class="btn primary" href="https://youtube.com/@matinhologrom" target="_blank" rel="noopener">رفتن به کانال YouTube</a></div></section></main>
-<footer class="footer">© 2026 MATIN_HOLOGROM — AI Content</footer></div></body></html>
+<footer class="footer">© 2026 MATIN_HOLOGROM — AI Content</footer></div>
+<style>
+#dragBuddy{position:fixed;left:50%;bottom:26px;width:92px;height:92px;border-radius:50%;z-index:9999;cursor:grab;touch-action:none;user-select:none;background:radial-gradient(circle at 30% 24%,#b9f3ff 0 7%,#54d9ff 18%,#1689e8 52%,#064b9b 100%);box-shadow:inset -14px -16px 22px rgba(0,20,80,.42),inset 12px 10px 18px rgba(255,255,255,.38),0 12px 30px rgba(0,120,255,.35);transform:translateX(-50%);transition:filter .15s,transform .15s}
+#dragBuddy.dragging{cursor:grabbing;filter:saturate(1.25) brightness(1.08)}
+#dragBuddy .eye{position:absolute;top:31px;width:17px;height:22px;background:#fff;border-radius:50%;box-shadow:0 2px 5px #003b73;overflow:hidden}
+#dragBuddy .eye:after{content:'';position:absolute;width:8px;height:11px;border-radius:50%;background:#10233d;left:4px;top:6px;transition:transform .08s}
+#dragBuddy .eye.l{left:24px}.eye.r{right:24px}
+#dragBuddy .mouth{position:absolute;left:50%;top:57px;width:25px;height:11px;border:3px solid #082c58;border-top:0;border-radius:0 0 18px 18px;transform:translateX(-50%);transition:.15s}
+#dragBuddy.happy .mouth{height:15px;top:53px}
+#dragBuddy.angry .mouth{border-top:3px solid #082c58;border-bottom:0;border-radius:18px 18px 0 0;top:64px}
+#dragBuddy.sad .mouth{border-bottom:0;border-top:3px solid #082c58;border-radius:18px 18px 0 0;top:63px}
+#dragBuddy.angry .eye:before{content:'';position:absolute;left:-2px;top:0;width:21px;height:4px;background:#082c58;transform:rotate(18deg)}
+#dragBuddy.angry .eye.r:before{transform:rotate(-18deg)}
+#dragBuddy .spark{position:absolute;right:-8px;top:-8px;font-size:22px;opacity:0;transition:.15s}
+#dragBuddy.happy .spark{opacity:1}
+</style>
+<style>
+#ai-creature{position:fixed;left:50%;top:55%;width:92px;height:92px;border-radius:50%;z-index:9999;pointer-events:none;background:radial-gradient(circle at 30% 24%,#dffbff 0 6%,#62e8ff 18%,#1598ee 48%,#0755b8 78%,#03285f);box-shadow:inset -13px -17px 22px #0005,inset 10px 8px 18px #fff5,0 14px 34px #0066ff55;transform:translate(-50%,-50%);will-change:left,top}
+#ai-creature .eye{position:absolute;top:29%;width:22px;height:27px;background:#fff;border-radius:50%;overflow:hidden}.eye.a{left:21%}.eye.b{right:21%}.pupil{position:absolute;width:10px;height:13px;background:#07152e;border-radius:50%;left:6px;top:7px}.mouth{position:absolute;left:50%;top:65%;width:28px;height:12px;transform:translateX(-50%);border-bottom:4px solid #07152e;border-radius:0 0 50% 50%}
+#ai-msg{position:fixed;z-index:10000;pointer-events:none;padding:10px 14px;border:1px solid #55dfff88;border-radius:14px;background:rgba(7,13,30,.96);color:#fff;font:700 13px Tahoma,Arial,sans-serif;opacity:0;transform:translate(-50%,-100%) scale(.9);transition:opacity .22s,transform .22s;white-space:nowrap;box-shadow:0 8px 24px #0008}
+@keyframes aiShake{25%{margin-left:-8px}75%{margin-left:8px}}.ai-shake{animation:aiShake .35s ease 2}
+@media(max-width:600px){#ai-creature{width:72px;height:72px}.eye{transform:scale(.8)}#ai-msg{font-size:11px;max-width:82vw;white-space:normal;text-align:center}}
+</style>
+<div id="ai-creature"><div class="eye a"><div class="pupil"></div></div><div class="eye b"><div class="pupil"></div></div><div class="mouth"></div></div><div id="ai-msg"></div>
+<script>
+(()=>{
+ const o=document.getElementById('ai-creature'),m=document.getElementById('ai-msg'),ps=[...o.querySelectorAll('.pupil')];
+ let tx=innerWidth/2,ty=innerHeight*.55,x=tx,y=ty,lastSpeak=0,speakTimer,lastMove=performance.now(),lastScroll=0,fastMoves=0,clicks=0;
+ const normal=['دارم رفتار صفحه رو بررسی می‌کنم 👀','جالبه... داری چی پیدا می‌کنی؟ 🧠','اگه جایی مشکل داری، بهم بگو 🤖','من هنوز حواسم بهته 😏','یه چیزی اینجا توجه منو جلب کرد...','خب رفیق، دنبال چی می‌گردی؟','این قسمت رو امتحان کردی؟ شاید به کارت بیاد.'];
+ const idle=['هنوز اینجایی؟ 👀','چند لحظه‌ست چیزی نزدی... فکر می‌کنی؟ 🧠','اگه مشکلی داری، توضیحش بده؛ شاید بتونم راهنمایی کنم.','من منتظرم ببینم قدم بعدیت چیه 🤖'];
+ function bounds(){const r=o.getBoundingClientRect(),pad=12;return{minX:r.width/2+pad,maxX:innerWidth-r.width/2-pad,minY:r.height/2+pad,maxY:innerHeight-r.height/2-pad}}
+ function say(text,force=false){const now=performance.now();if(!force&&now-lastSpeak<850)return;m.textContent=text;m.style.left=x+'px';m.style.top=Math.max(60,y-o.getBoundingClientRect().height/2-12)+'px';m.style.opacity='1';m.style.transform='translate(-50%,-100%) scale(1)';clearTimeout(speakTimer);speakTimer=setTimeout(()=>{m.style.opacity='0';m.style.transform='translate(-50%,-100%) scale(.9)'},2800);lastSpeak=now}
+ function move(e){const now=performance.now(),dt=Math.max(8,now-lastMove),speed=Math.hypot(e.clientX-tx,e.clientY-ty)/dt;lastMove=now;tx=e.clientX;ty=e.clientY;fastMoves=speed>.9?fastMoves+1:Math.max(0,fastMoves-1);const b=bounds(),d=Math.hypot(tx-x,ty-y);
+   if(d<155){const a=Math.atan2(y-ty,x-tx),jump=120+Math.random()*120;tx=Math.max(b.minX,Math.min(b.maxX,x+Math.cos(a)*jump));ty=Math.max(b.minY,Math.min(b.maxY,y+Math.sin(a)*jump));o.classList.remove('ai-shake');void o.offsetWidth;o.classList.add('ai-shake');
+     if(now-lastSpeak>1000)say(speed>.9?'آروم‌تر! 😳 داری خیلی سریع دنبالم می‌کنی!':'نزدیک شدی! ولی هنوز نمی‌تونی منو بگیری 😏');
+   }
+ }
+ addEventListener('pointermove',move,{passive:true});
+ addEventListener('pointerdown',e=>{clicks++;if(clicks%4===0)say('هی! چند بار کلیک کردی 😄 دنبال یه چیز خاصی هستی؟',true);else if(performance.now()-lastSpeak>900)say('دیدمت! 👀',true)},{passive:true});
+ addEventListener('scroll',()=>{lastScroll=performance.now();if(performance.now()-lastSpeak>1300)say('داری صفحه رو می‌گردونی؟ 👀 بخش‌های پایین‌تر هم هستن.',true)},{passive:true});
+ addEventListener('online',()=>say('اتصال اینترنت برگشت! 🌐🤖',true));
+ addEventListener('offline',()=>say('فکر کنم اینترنت قطع شده 🌐؛ اتصال رو بررسی کن.',true));
+ document.querySelectorAll('.btn,.nav a').forEach(el=>el.addEventListener('click',()=>{const text=(el.textContent||'').trim();setTimeout(()=>say(text?`رفتی سمت «${text}» 👀`: 'داری یه بخش دیگه رو بررسی می‌کنی 🤖',true),120)}));
+ addEventListener('resize',()=>{const b=bounds();tx=Math.max(b.minX,Math.min(b.maxX,tx));ty=Math.max(b.minY,Math.min(b.maxY,ty));x=Math.max(b.minX,Math.min(b.maxX,x));y=Math.max(b.minY,Math.min(b.maxY,y))});
+ setTimeout(()=>say('سلام! من AI سایتتم 🤖',true),900);
+ setInterval(()=>{const now=performance.now();if(now-lastSpeak>4200){const list=(now-lastMove>6500)?idle:normal;say(list[Math.floor(Math.random()*list.length)],true)}},3000);
+ function loop(){const b=bounds();tx=Math.max(b.minX,Math.min(b.maxX,tx));ty=Math.max(b.minY,Math.min(b.maxY,ty));x+=(tx-x)*.065;y+=(ty-y)*.065;o.style.left=x+'px';o.style.top=y+'px';m.style.left=x+'px';m.style.top=Math.max(60,y-o.getBoundingClientRect().height/2-12)+'px';const dx=tx-x,dy=ty-y,l=Math.max(1,Math.hypot(dx,dy));ps.forEach(p=>p.style.transform=`translate(${Math.max(-5,Math.min(5,dx/l*5))}px,${Math.max(-5,Math.min(5,dy/l*5))}px)`);requestAnimationFrame(loop)}
+ requestAnimationFrame(loop);
+})();
+</script>
+</body></html>
