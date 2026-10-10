@@ -115,4 +115,4 @@ try{localStorage.setItem('mh-language',lang)}catch(e){}
 picker.addEventListener('change',()=>apply(picker.value));let saved='fa';try{saved=localStorage.getItem('mh-language')||'fa'}catch(e){}picker.value=saved;apply(saved);
 })();
 </script>
-</body></html>
+<script id="mh-ai-button-language-fix">(()=>{const picker=document.getElementById('mh-language');const btn=document.querySelector('.ai-tools-entry');if(!picker||!btn)return;const labels={fa:'🤖 ابزارهای هوش مصنوعی',en:'🤖 AI Tools',ru:'🤖 Инструменты ИИ',zh:'🤖 AI 工具',fr:'🤖 Outils IA'};function sync(){btn.textContent=labels[picker.value]||labels.fa}picker.addEventListener('change',sync);sync();})();</script></body></html>
